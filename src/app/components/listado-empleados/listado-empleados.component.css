@@ -1,0 +1,87 @@
+/* Estilos generales para los botones */
+.spanstyle {
+    color: #05ae2c;
+    font-weight: bold;
+    border-bottom: 2px solid #0a200f;
+}
+
+.listado-empleados-container {
+    background-image: url('C:\Users\DAYAN  BERRIO\Downloads\empresa-app\src\assets\tu-imagen.jpg\fondo.jpg');
+    background-size: cover; /* Para cubrir todo el contenedor */
+    background-position: center; /* Para centrar la imagen */
+}
+
+.table {
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+.btn {
+    padding: 8px 16px; /* Reducir padding para botones */
+    font-size: 14px; /* Reducir tamaño de fuente para botones */
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Botón de éxito (crear nuevo empleado) */
+.btn-success {
+    background-color: #28a745; /* Verde éxito */
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Botón de información (editar) */
+.btn-info {
+    background-color: #5bc0de; /* Verde claro */
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #39a9db;
+}
+
+/* Botón de peligro (eliminar) */
+.btn-danger {
+    background-color: #218838; /* Verde oscuro */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #1e7e34;
+}
+
+/* Pequeñas modificaciones para los botones pequeños */
+.btn-sm {
+    padding: 6px 12px; /* Reducir padding para botones pequeños */
+    font-size: 12px; /* Reducir tamaño de fuente para botones pequeños */
+}
+
+/* Espaciado entre botones */
+.ms-2 {
+    margin-left: 0.5rem;
+}
+
+/* Asegurar que los botones de editar y eliminar tengan la misma proporción y estén alineados */
+.btn-acciones {
+    display: flex;
+    gap: 0.5rem; /* Espacio entre botones */
+}
+
+/* Aplicar las clases necesarias para los botones de acción */
+.btn-sm.btn-info, .btn-sm.btn-danger {
+    flex: 1;
+}
+
+/* Botón de éxito (crear nuevo empleado) */
+.btn-success.btn-crear-empleado {
+    background-color: #28a745; /* Verde éxito */
+    color: white;
+}
+
+.btn-success.btn-crear-empleado:hover {
+    background-color: #218838;
+}

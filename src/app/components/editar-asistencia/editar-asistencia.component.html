@@ -1,0 +1,28 @@
+<div class="container" *ngIf="asistencia">
+    <h2>Editar Asistencia</h2>
+    <form (ngSubmit)="actualizarAsistencia()">
+      <div class="form-group">
+        <label for="empleado_id">Empleado</label>
+        <select class="form-control" [(ngModel)]="asistencia.empleado_id" name="empleado_id" required>
+          <option *ngFor="let empleado of empleados" [value]="empleado.empleado_id">
+            {{ empleado.nombre }} {{ empleado.apellido }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input type="date" class="form-control" [(ngModel)]="asistencia.fecha" name="fecha" required>
+      </div>
+      <div class="form-group">
+        <label for="hora_entrada">Hora de Entrada</label>
+        <input type="time" class="form-control" [(ngModel)]="asistencia.hora_entrada" name="hora_entrada" required>
+      </div>
+      <div class="form-group">
+        <label for="hora_salida">Hora de Salida</label>
+        <input type="time" class="form-control" [(ngModel)]="asistencia.hora_salida" name="hora_salida" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Actualizar</button>
+      <a routerLink="/asistencia" class="btn btn-secondary ml-2">Cancelar</a>
+    </form>
+  </div>
+  

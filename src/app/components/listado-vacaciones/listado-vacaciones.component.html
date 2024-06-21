@@ -1,0 +1,38 @@
+<!-- src/app/components/listado-vacaciones/listado-vacaciones.component.html -->
+
+<div class="container-fluid bg-light border p-3 rounded shadow-sm listado-vacaciones-container">
+    <div class="row">
+      <div class="col">
+        <h2 class="mt-4 mb-4"><span class="spanstyle">Listado de Vacaciones</span></h2>
+      </div>
+      <div class="col d-flex justify-content-end align-items-center">
+        <a routerLink="/crear-vacacion" class="btn btn-success">Crear Nueva Vacación</a>
+      </div>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Empleado</th>
+          <th>Motivo</th>
+          <th>Fecha Inicio</th>
+          <th>Fecha Fin</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vacacion of vacaciones">
+          <td>{{ vacacion.vacacion_id }}</td>
+          <td>{{ getEmpleadoNombre(vacacion.empleado_id) }}</td>
+          <td>{{ vacacion.motivo }}</td>
+          <td>{{ vacacion.fecha_inicio | date }}</td>
+          <td>{{ vacacion.fecha_fin | date }}</td>
+          <td>
+            <a routerLink="/editar-vacacion/{{ vacacion.vacacion_id }}" class="btn btn-sm btn-info">Editar</a>
+            <button class="btn btn-sm btn-danger ms-2" (click)="deleteVacacion(vacacion.vacacion_id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

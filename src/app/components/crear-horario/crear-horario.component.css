@@ -1,0 +1,21 @@
+/* Estilos generales para los botones */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px; /* Border radius */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(45deg, #28a745, #28a745); /* Color inicial */
+}
+
+/* Hover con degradé de verde a negro */
+.btn:hover {
+    background: linear-gradient(45deg, #28a745, #000000); /* Degradé de verde a negro */
+}
+
+/* Espaciado entre botones */
+.ml-2 {
+    margin-left: 0.5rem;
+}

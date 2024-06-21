@@ -1,0 +1,62 @@
+/* Estilos generales para los botones */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Botón de éxito (crear nuevo empleado) */
+.btn-success {
+    background-color: #28a745; /* Verde éxito */
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Botón de información (editar) - Verde más claro */
+.btn-info {
+    background-color: #5bc0de; /* Verde claro */
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #39a9db;
+}
+
+/* Botón de peligro (eliminar) - Verde más oscuro */
+.btn-danger {
+    background-color: #218838; /* Verde oscuro */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #1e7e34;
+}
+
+/* Pequeñas modificaciones para los botones pequeños */
+.spanstyle{
+    color: #05ae2c;
+    font-weight: bold;
+    border-bottom: 2px solid #0a200f;
+    
+}
+.listado-asistencias-container {
+    background-image: url('C:\Users\DAYAN  BERRIO\Downloads\empresa-app\src\assets\tu-imagen.jpg\fondo.jpg');
+    background-size: cover; /* Para cubrir todo el contenedor */
+    background-position: center; /* Para centrar la imagen */
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* Espaciado entre botones */
+.ms-2 {
+    margin-left: 0.5rem;
+}

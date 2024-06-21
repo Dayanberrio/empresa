@@ -1,0 +1,28 @@
+<div class="container">
+    <h2 class="mt-4 mb-4">Crear Nuevo Horario</h2>
+    <form (ngSubmit)="crearHorario()">
+      <div class="mb-3">
+        <label for="empleado_id" class="form-label">Empleado</label>
+        <select class="form-select" [(ngModel)]="horario.empleado_id" name="empleado_id" required>
+          <option *ngFor="let empleado of empleados" [value]="empleado.empleado_id">{{ empleado.nombre }} {{ empleado.apellido }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="dia_semana" class="form-label">Día</label>
+        <select class="form-select" [(ngModel)]="horario.dia_semana" name="dia_semana" required>
+          <option *ngFor="let dia of diasSemana" [value]="dia">{{ dia }}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="hora_entrada" class="form-label">Hora Entrada</label>
+        <input type="time" class="form-control" id="hora_entrada" [(ngModel)]="horario.hora_entrada" name="hora_entrada" required>
+      </div>
+      <div class="mb-3">
+        <label for="hora_salida" class="form-label">Hora Salida</label>
+        <input type="time" class="form-control" id="hora_salida" [(ngModel)]="horario.hora_salida" name="hora_salida" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <button type="button" class="btn btn-secondary" routerLink="/listado-horarios">Cancelar</button>
+    </form>
+  </div>
+  

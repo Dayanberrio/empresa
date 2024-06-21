@@ -1,0 +1,36 @@
+<div class="container-fluid bg-light border p-3 rounded shadow-sm listado-horarios-container">
+    <div class="row">
+      <div class="col">
+        <h2 class="mt-4 mb-4"><span class="spanstyle">Listado de Horarios</span></h2>
+      </div>
+      <div class="col d-flex justify-content-end align-items-center">
+        <button class="btn btn-success" routerLink="/crear-horario">Crear Nuevo Horario</button>
+      </div>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Empleado</th>
+          <th>Día</th>
+          <th>Hora Entrada</th>
+          <th>Hora Salida</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let horario of horarios">
+          <td>{{ horario.horario_id }}</td>
+          <td>{{ getEmpleadoNombre(horario.empleado_id) }}</td>
+          <td>{{ horario.dia_semana }}</td>
+          <td>{{ horario.hora_entrada }}</td>
+          <td>{{ horario.hora_salida }}</td>
+          <td>
+            <button class="btn btn-sm btn-info" routerLink="/editar-horario/{{ horario.horario_id }}">Editar</button>
+            <button class="btn btn-sm btn-danger ms-2" (click)="deleteHorario(horario.horario_id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

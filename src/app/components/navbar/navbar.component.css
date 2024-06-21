@@ -1,0 +1,50 @@
+/* Estilo para la barra de navegación */
+.navbar {
+  background: linear-gradient(to right, black, rgb(3, 112, 96));
+}
+
+/* Espaciado y estilo para los enlaces de la navegación */
+.navbar-nav .nav-item .nav-link {
+  margin-right: 9px;
+  padding: 10px 12px;
+  transition: background-color 0.1s, color 0.1s;
+  text-align: center;
+  color: white; /* Se agrega color blanco al texto */
+}
+
+/* Estilo para el hover de los enlaces de la navegación */
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: rgb(3, 112, 96);
+  color: black;
+  border-radius: 5px;
+}
+
+/* Estilo para el botón de búsqueda */
+.navbar .btn {
+  margin-left: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para el hover del botón de búsqueda */
+.navbar .btn:hover {
+  background-color: rgb(3, 112, 96);
+  color: black;
+  border-radius: 5px;
+}
+
+/* Bordes redondeados para el campo de búsqueda */
+.navbar .form-control {
+  border-radius: 5px;
+}
+
+/* Alinear elementos del menú al centro */
+.navbar-collapse {
+  flex-grow: 50;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

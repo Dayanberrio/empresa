@@ -1,0 +1,65 @@
+<div class="container">
+  <h2 class="mt-4 mb-4">Crear Nuevo Empleado</h2>
+  <form (ngSubmit)="onSubmit()" #empleadoForm="ngForm">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" required [(ngModel)]="empleado.nombre" name="nombre" #nombre="ngModel">
+      <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert alert-danger">
+        Nombre es requerido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" class="form-control" id="apellido" required [(ngModel)]="empleado.apellido" name="apellido" #apellido="ngModel">
+      <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="alert alert-danger">
+        Apellido es requerido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Telefono:</label>
+      <input type="number" class="form-control" id="telefono" required [(ngModel)]="empleado.telefono" name="telefono" #telefono="ngModel">
+      <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
+        Telefono es requerido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email" required [(ngModel)]="empleado.email" name="email" #email="ngModel">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+        Email es requerido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="direccion">Direccion:</label>
+      <input type="text" class="form-control" id="direccion" required [(ngModel)]="empleado.direccion" name="direccion" #direccion="ngModel">
+      <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)" class="alert alert-danger">
+        Direccion es requerida.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="puesto">Puesto:</label>
+      <input type="text" class="form-control" id="puesto" required [(ngModel)]="empleado.puesto" name="puesto" #puesto="ngModel">
+      <div *ngIf="puesto.invalid && (puesto.dirty || puesto.touched)" class="alert alert-danger">
+        Puesto es requerido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fecha_contratacion">Fecha de Contratación:</label>
+      <input type="date" class="form-control" id="fecha_contratacion" required [(ngModel)]="empleado.fecha_contratacion" name="fecha_contratacion" #fecha_contratacion="ngModel">
+      <div *ngIf="fecha_contratacion.invalid && (fecha_contratacion.dirty || fecha_contratacion.touched)" class="alert alert-danger">
+        Fecha de Contratación es requerida.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="salario">Salario:</label>
+      <input type="number" class="form-control" id="salario" required [(ngModel)]="empleado.salario" name="salario" #salario="ngModel">
+      <div *ngIf="salario.invalid && (salario.dirty || salario.touched)" class="alert alert-danger">
+        Salario es requerido.
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-info" [disabled]="empleadoForm.form.invalid">Crear Empleado</button>
+    <a routerLink="/empleados" class="btn btn-info ml-2">Cancelar</a>
+  </form>
+</div>
+<br><br><br><br><br><br><br><br>

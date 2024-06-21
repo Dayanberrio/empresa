@@ -1,0 +1,35 @@
+<div class="container-fluid bg-light border p-3 rounded shadow-sm listado-asistencias-container">
+  <div class="row">
+    <div class="col">
+      <h2 class="mt-4 mb-4"><span class="spanstyle">Listado Asistencias</span></h2>
+    </div>
+    <div class="col d-flex justify-content-end align-items-center">
+      <button class="btn btn-success" [routerLink]="['/crear-asistencia']">Crear Nueva Asistencia</button>
+    </div>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Empleado</th>
+        <th>Fecha</th>
+        <th>Hora Entrada</th>
+        <th>Hora Salida</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let asistencia of asistencias">
+        <td>{{ asistencia.asistencia_id }}</td>
+        <td>{{ getEmpleadoNombre(asistencia.empleado_id) }}</td>
+        <td>{{ asistencia.fecha }}</td>
+        <td>{{ asistencia.hora_entrada }}</td>
+        <td>{{ asistencia.hora_salida }}</td>
+        <td>
+          <button class="btn btn-sm btn-info" [routerLink]="['/editar-asistencia', asistencia.asistencia_id]">Editar</button>
+          <button class="btn btn-sm btn-danger ms-2" (click)="deleteAsistencia(asistencia.asistencia_id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

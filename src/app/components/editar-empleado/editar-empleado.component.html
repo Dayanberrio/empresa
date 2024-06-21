@@ -1,0 +1,28 @@
+<!-- src/app/components/editar-empleado/editar-empleado.component.html -->
+<div class="container mt-4">
+    <h2>Editar Empleado</h2>
+    <form (ngSubmit)="actualizarEmpleado()">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" class="form-control" [(ngModel)]="empleado.nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" class="form-control" [(ngModel)]="empleado.apellido" name="apellido" required>
+      </div>
+      <div class="form-group">
+        <label for="puesto">Puesto</label>
+        <input type="text" id="puesto" class="form-control" [(ngModel)]="empleado.puesto" name="puesto" required>
+      </div>
+      <div class="form-group">
+        <label for="fecha_contratacion">Fecha de Contratación</label>
+        <input type="date" id="fecha_contratacion" class="form-control" [(ngModel)]="empleado.fecha_contratacion" name="fecha_contratacion" required>
+      </div>
+      <div class="form-group">
+        <label for="salario">Salario</label>
+        <input type="number" id="salario" class="form-control" [(ngModel)]="empleado.salario" name="salario" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Actualizar</button>
+      <a routerLink="/empleados" class="btn btn-secondary ml-2" >cancelar</a>
+    </form>
+  </div>

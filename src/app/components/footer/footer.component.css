@@ -1,0 +1,26 @@
+/* Estilo personalizado */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to right, #0f0f0f, rgb(3, 112, 96)); /* Degradado de fondo */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+  }
+  
+  .center-icons {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .center-icons li {
+    margin: 20px; /* Espacio entre los iconos */
+  }
+  
+  .center-icons li a {
+    font-size: 30px; /* Tamaño de los iconos */
+  }
+  

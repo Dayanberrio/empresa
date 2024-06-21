@@ -1,0 +1,49 @@
+
+<div class="container-fluid bg-light border p-3 rounded shadow-sm listado-empleados-container">
+    <div class="row">
+      <div class="col">
+        <h2 class="mt-4 mb-4"><span class="spanstyle">Listado de  Empleados</span></h2>
+      </div>
+      <div class="col d-flex justify-content-end align-items-center">
+        <button class="btn btn-success btn-br-5%" routerLink="/crear-empleado">Crear Nuevo Empleado</button>
+      </div>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>telefono</th>
+          <th>email</th>
+          <th>dirección</th>
+          <th>Puesto</th>
+          <th>Fecha de Contratación</th>
+          <th>Salario</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{ empleado.empleado_id }}</td>
+          <td>{{ empleado.nombre }}</td>
+          <td>{{ empleado.apellido }}</td>
+          <td>{{ empleado.telefono }}</td>
+          <td>{{ empleado.email }}</td>
+          <td>{{ empleado.direccion }}</td>
+          <td>{{ empleado.puesto }}</td>
+          <td>{{ empleado.fecha_contratacion }}</td>
+          <td>{{ empleado.salario }}</td>
+          <td>
+            <div class="btn-acciones">
+              <button class="btn btn-sm btn-info" [routerLink]="['/editar-empleado', empleado.empleado_id]">Editar</button>
+            <button class="btn btn-sm btn-danger ms-2" (click)="deleteEmpleado(empleado.empleado_id)">Eliminar</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  
